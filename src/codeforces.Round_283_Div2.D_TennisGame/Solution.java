@@ -1,5 +1,7 @@
-package com.company;
+package codeforces.Round_283_Div2.D_TennisGame;
 
+import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -8,7 +10,11 @@ import java.util.stream.Collectors;
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        parseSolveAndPrint(System.in, System.out);
+    }
+
+    public static void parseSolveAndPrint(InputStream in, PrintStream out) {
+        Scanner scanner = new Scanner(in);
 
         int n = scanner.nextInt();
         int[] a = new int[n];
@@ -74,9 +80,9 @@ public class Solution {
             return compResult;
         }).collect(Collectors.toList());
 
-        System.out.println(result.size());
+        out.println(result.size());
         for (Pair pair : result) {
-            System.out.println(pair.s + " " + pair.t);
+            out.println(pair.s + " " + pair.t);
         }
     }
 
